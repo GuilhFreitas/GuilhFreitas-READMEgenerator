@@ -83,8 +83,6 @@ const readmeText =
 
 ${description}
 
-## Table of Contents
-
 <details>
   <summary>Table of Contents</summary>
   <ol>
