@@ -1,6 +1,7 @@
 import inquirer from "inquirer";
 import fs from "fs/promises";
 
+// prompts the user for info about their project
 let {title, description, install, usage, license, contribute, tests, username, email} = await inquirer
     .prompt([
         {
@@ -57,6 +58,7 @@ let {title, description, install, usage, license, contribute, tests, username, e
         
     ]);
 
+// selects licenseBadge to display depending on user choice
 function licenseBadge(){
     if (license = 'The MIT License'){
         return '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)';
@@ -68,7 +70,10 @@ function licenseBadge(){
         return
     }
 }
+
 const licenseDotText = "`LICENSE.txt`";
+
+// the template layout for the README to be generated
 const readmeText = 
 `${licenseBadge()}
 
