@@ -33,6 +33,7 @@ let {title, description, install, usage, license, contribute, tests, username, e
                 'The MIT License',
                 'Mozilla Public License 2.0',
                 'Eclipse Public License 1.0',
+                'N/A',
             ],
         },
         {
@@ -122,4 +123,8 @@ ${tests}
 
 ## Questions
 
-For further information about this project, please contact me through GitHub at https://github.com/${username}, or you can send me an email at ${email}.`
+For further information about this project, please contact me through GitHub at https://github.com/${username}, or you can send me an email at ${email}.`;
+
+// writes the new README to disk
+fs.writeFile("./output/README.md", readmeText);
+
