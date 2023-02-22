@@ -18,7 +18,6 @@ let {title, description, install, usage, license, contribute, tests, username, e
             type: 'input',
             name: 'install',
             message: 'Please type installation instructions for your project:',
-            default: 'N/A',
         },
         {
             type: 'input',
@@ -61,11 +60,11 @@ let {title, description, install, usage, license, contribute, tests, username, e
 
 // selects licenseBadge to display depending on user choice
 function licenseBadge(){
-    if (license = 'The MIT License'){
+    if (license === 'The MIT License'){
         return '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)';
-    }else if(license = 'Mozilla Public License 2.0'){
+    }else if(license === 'Mozilla Public License 2.0'){
         return '[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)';
-    }else if(license = 'Eclipse Public License 1.0'){
+    }else if(license === 'Eclipse Public License 1.0'){
         return '[![License](https://img.shields.io/badge/License-EPL_1.0-red.svg)](https://opensource.org/licenses/EPL-1.0)';
     }else{
         return
