@@ -57,10 +57,20 @@ let {title, description, install, usage, license, contribute, tests, username, e
         
     ]);
 
-
+function licenseBadge(){
+    if (license = 'The MIT License'){
+        return '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)';
+    }else if(license = 'Mozilla Public License 2.0'){
+        return '[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)';
+    }else if(license = 'Eclipse Public License 1.0'){
+        return '[![License](https://img.shields.io/badge/License-EPL_1.0-red.svg)](https://opensource.org/licenses/EPL-1.0)';
+    }else{
+        return
+    }
+}
 const licenseDotText = "`LICENSE.txt`";
-let readmeText = 
-`${licenseBadge}
+const readmeText = 
+`${licenseBadge()}
 
 # ${title}
 
@@ -107,4 +117,4 @@ ${tests}
 
 ## Questions
 
-${questions}`
+For further information about this project, please contact me through GitHub at https://github.com/${username}, or you can send me an email at ${email}.`
